@@ -1,0 +1,121 @@
+# Streamlit Capabilities
+
+- Video 1
+    - streamlit run main.py  - To run a streamlit program in the terminal
+    - default port is 8501
+    - st.title - Like an H1
+    - st.header - Like an H2
+    - st.subheader - Like an H3
+    - st.text - Plain text
+- Video 2
+    - st.markdown() - just put markdown in the parentheses
+    - #'s for headers - more #'s means smaller header
+    - `**bold text**`
+    - `*italic text*`
+    - `> Put something in block quotes
+    - `st.markdown("1. First Item\n 2. Second Item") # An ordered list
+    - `st.code(str)` Where str = "print('Hello World')"  Not markdown - part of Streamlit
+    - st.markdown(---) # Horizontal rule
+    - `st.markdown('[Google](https://www.google.com/)')` # Link in Markdown
+    - tables are possible - but painful looking IMHO
+    - json feature st.json(json)
+    - emojis possible
+- Video 3
+    - Metric function - able to show numbers with delta to indicate changes over time
+    - tables using pandas library
+    - dataframe is a table that allows sorting by clicking column headers
+- Video 4
+    - Images - can have captions, change height (he didn't show so ?) and width
+    - Audio - can specify start time in seconds
+    - Video - can specify start time in seconds
+- Video 5
+    - Button widget - has a value of True or False
+    - text_input - type into a one line field. Can have line of code above the box
+    - st.write() - writes text onto web page - not sure how this is different from st.text
+- Video 6
+    - Download button - takes a file object and needs a file name for the downloaded file.
+- Video 7
+    - Created a list of two images - when he pointed an image element at the list rather than a single image, the images ended up side by side rather than on top of each other.
+    - He also created a list of captions and used that in the image element rather than one caption. And it worked.
+    - Link Button - link_button, text for button and http address are parameters
+- Video 8
+    - Checkbox widget. Each checkbox is a separate widget. Has a value of True or False
+    - Column variable allows to put checkboxes side by side rather than above and below. I suspect this is more versatile than just checkboxes
+- Video 9
+    - Toggle widget - slider appearance. Boolean value of True or False
+    - Again uses columns to put toggles side by side
+- Video 10
+    - Radio buttons - Only one button active at a time.
+    - A title and then a list of button titles in the parameters.
+    - Uses button titles to determine which button is active (True)
+    - Can use index parameter to select which button is active initially, set to None to not select a button initially
+    - Can use disabled parameter to deactivate all the buttons.
+- Video 11
+    - Select Box - dropdown with 2 or more items to select from
+    - First parameter is title for box, second is a list of options
+    - Only one item can be selected
+- Video 12
+    - MultiSelect  - like Select Box but can select more than one item.
+    - First parameter is title for box, second is a list of options, third parameter is default selection
+    - Can be multiple default options
+    - Multiselect returns a list of the selected options
+- Video 13
+    - Slider object - slide to value in a range
+    - First parameter is title of object, 2nd and 3rd are range of slider, 4th is default value
+    - Returns the value of the slider object
+    - He used it to dynamically change the width of an image
+- Video 14
+    - Select slider object - Slider but just to specific values.
+    - First parameter is title, then list with each valid value.
+    - Returns value the slider is on
+- Video 15
+    - Text Input Object - Single line text box
+    - First parameter is title above the box
+    - Returns content of box - can press enter or setup a button
+- Video 16
+    - Number input - Like text input but with + and - at the end
+    - First parameter is title above the box
+    - No need to convert from string to do math like if you used text_input
+- Video 17
+    - Text Area widget - multiline text input
+    - Parameters - title, default value and placeholder value inside the widget
+    - Can also set max characters that can be entered in widget
+    - returns content of text entered inside the widget
+- Video 18
+    - Date input object - returns 2019-03-28
+    - Current date is default starting date but that can be changed
+- Video 19
+    - Time input object - returns 21:45 (I think - wasn't very clear)
+- Video 20
+    - File uploader widget - let's you select more than one file at a time
+- Video 21
+    - Color Picker - parameters are a title above and the default (starting color)
+    - Returns a hex code 
+- Video 22
+    - Create a Form 
+    - Use `with` statement - then lists all widgets inside form underneath it
+    - A Submit button is required - when it's pressed all the values returned by the widgets are updated
+    - On the screen there's a border around the form 
+- Video 23
+    - Sidebar Widget
+    - Uses `with` statement and widgets are indented under that
+    - Those all show up on the left side of the screen in a light gray object
+- Video 24
+    - Columns 
+    - Set up columns then add widgets to the columns using with statement
+    - widgets for each column indented under that columns with statement
+- Video 25
+    - Tabs
+    - Create tabs `tab1, tab2, tab3 = ['Football', 'Basketball', 'Hockey']
+    - Then with statements for each tab followed by that tab's widgets
+- Video 26
+    - Expander widget - shows single line with a title (he used 'See explanation'), then there's a dropdown with the full explanation. 
+- Video 27
+    - Container widget. Uses with statement, can have a border. They go one above the other when multiple ones exist.
+    - He used an expander above the container - then when he clicked the expander all the widgets in the container appeared at once.
+- Video 28
+    - Empty widget. He showed a loop counting down seconds using the write widget. That created as many writes to the screen as seconds in the count. 
+    - Then he put the loop in an empty widget and the write statement overwrote the previous write statement so there was only one line of text on the screen.
+- Video 29
+    - Multiple pages. He added a sidebar to the webpage and a folder named pages to the project. Each python/streamlit program that he put in the folder showed up on the screen in the sidebar.
+    - The programs in the pages folder are full streamlit programs, including imports and widgets.
